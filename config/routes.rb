@@ -1,4 +1,8 @@
 Redo::Application.routes.draw do
+
+  get "pages/home"
+  get "pages/contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
