@@ -3,8 +3,25 @@
   <head>
     <title><%= title %></title>
     <%= csrf_meta_tag %>
+    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+    <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
   </head>
   <body>
-    <%= yield %>
+    <div class="container">
+      <header>
+        <%= link_to logo_img, root_path %>
+        <nav class="round">
+          Header Nav Text/UL Here
+        </nav>
+      </header>
+      <section class="round">
+        <%= yield %>
+      </section>
+      <footer>
+        <nav class="round">
+          Footer Nav Text/UL Here
+        </nav>
+      </footer>      
+    </div>
   </body>
 </html>

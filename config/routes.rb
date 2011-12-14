@@ -1,8 +1,8 @@
 Redo::Application.routes.draw do
 
-  get "pages/home"
-  get "pages/contact"
-  get "pages/about"
+  root :to => 'pages#home'
+  match '/contact' => 'pages#contact'
+  match '/about' => 'pages#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
